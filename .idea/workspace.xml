@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48fa6866-977a-4876-8173-f293e35054e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SearchMinOnLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/method_1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/method_1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DichotomyMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DichotomyMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FibonacciMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FibonacciMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GivenFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GivenFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GoldenRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoldenRatio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tables.java" afterDir="false" />
-    </list>
+    <list default="true" id="48fa6866-977a-4876-8173-f293e35054e3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +119,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GoldenRatio.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -140,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SearchMinOnLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+            <state relative-caret-position="489">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#544#545#0" expanded="true" />
                 <element signature="e#571#572#0" expanded="true" />
@@ -206,11 +194,11 @@
         <option value="$PROJECT_DIR$/src/Graphs.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Tables.java" />
-        <option value="$PROJECT_DIR$/src/SearchMinOnLine.java" />
         <option value="$PROJECT_DIR$/src/DichotomyMethod.java" />
         <option value="$PROJECT_DIR$/src/GivenFunction.java" />
         <option value="$PROJECT_DIR$/src/FibonacciMethod.java" />
         <option value="$PROJECT_DIR$/src/GoldenRatio.java" />
+        <option value="$PROJECT_DIR$/src/SearchMinOnLine.java" />
       </list>
     </option>
   </component>
@@ -253,7 +241,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572630623368" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572631221976" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -268,7 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Graphs">
     <configuration name="Graphs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphs" />
       <module name="method_1" />
@@ -292,8 +280,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Graphs" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +302,7 @@
     <frame x="-7" y="0" width="951" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22558923" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22558923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -324,7 +312,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23627287" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23627287" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -392,19 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SearchMinOnLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
-          <folding>
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DichotomyMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -440,6 +415,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SearchMinOnLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
