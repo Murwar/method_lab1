@@ -19,25 +19,34 @@ public class Graphs extends Application {
         xAxis.setLabel("Log(eps)");
         yAxis.setLabel("Amount");
         final LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
+
         XYChart.Series dichotomySeries = new XYChart.Series();
         XYChart.Series goldenRatioSeries = new XYChart.Series();
         XYChart.Series fibonacciSeries = new XYChart.Series();
+        XYChart.Series minOnLineSeries = new XYChart.Series();
+
         dichotomySeries.setName("Dichotomy Method");
         goldenRatioSeries.setName("Golden Ratio Method");
         fibonacciSeries.setName("Fibonacci Method");
+        minOnLineSeries.setName("Search min on-line");
+
         for (double epsilon = 0.1; epsilon >= epsMin; epsilon -= step) {
             DichotomyMethod dichotomyMethod = new DichotomyMethod(epsilon);
             GoldenRatio goldenRatio = new GoldenRatio(epsilon);
             FibonacciMethod fibonacciMethod = new FibonacciMethod(epsilon, 0.01);
+            SearchMinOnLine searchMinOnLine = new SearchMinOnLine(-8, 0.01);
+
             dichotomySeries.getData().add(new XYChart.Data(Math.log(epsilon), dichotomyMethod.getCounter()));
             goldenRatioSeries.getData().add(new XYChart.Data(Math.log(epsilon), goldenRatio.getCounter()));
             fibonacciSeries.getData().add(new XYChart.Data(Math.log(epsilon), fibonacciMethod.getCounter()));
+            minOnLineSeries.getData().add(new XYChart.Data(Math.log(epsilon), searchMinOnLine.getCounter()));
         }
 
         Scene scene = new Scene(lineChart, 800, 600);
         lineChart.getData().add(dichotomySeries);
         lineChart.getData().add(goldenRatioSeries);
         lineChart.getData().add(fibonacciSeries);
+        lineChart.getData().add(minOnLineSeries);
 
         stage.setScene(scene);
         stage.show();

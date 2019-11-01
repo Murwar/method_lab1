@@ -5,6 +5,7 @@ public class FibonacciMethod {
     private int n = 0;
     private int counter = 0;
     private double a, b, x1, x2, eps, l; //l -длина конечного интервала, eps - константа различимости
+    private double prevL, currL;
     private GivenFunction function;
     private Vector<Vector<Double>> data = new Vector<>();
 
@@ -15,6 +16,8 @@ public class FibonacciMethod {
         this.function = new GivenFunction();
         this.a = function.getA();
         this.b = function.getB();
+        this.currL = function.getDist();
+        this.prevL = function.getDist();
         findN();
         calculate();
     }
@@ -55,7 +58,8 @@ public class FibonacciMethod {
         row.add(Double.valueOf(counter));
         row.add(this.a);
         row.add(this.b);
-        row.add(this.a / this.b);
+        row.add(Math.abs(this.b - this.a));
+        row.add(currL / prevL);
         row.add(this.x1);
         row.add(this.x2);
         row.add(this.function.f(x1));
@@ -80,6 +84,9 @@ public class FibonacciMethod {
                 findX1(counter);
             }
             counter++;
+
+            prevL = currL;
+            currL = Math.abs(b - a);
             putDataInRow();
         }
         x2 = x1 + eps;
@@ -87,10 +94,9 @@ public class FibonacciMethod {
             a = x1;
         else if (function.f(x1) < function.f(x2))
             b = x2;
-        else {
-            a = x1;
-            b = x2;
-        }
+
+        prevL = currL;
+        currL = Math.abs(b - a);
         counter++;
         putDataInRow();
     }

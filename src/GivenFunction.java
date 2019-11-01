@@ -17,4 +17,8 @@ public class GivenFunction {
     double getB() {
         return b;
     }
+
+    double getDist() {
+        return Math.abs(b - a);
+    }
 }

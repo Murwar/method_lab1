@@ -6,6 +6,7 @@ public class DichotomyMethod {
     private double epsilon;
     private double counter = 0;
     private double a, b, x1, x2;
+    private double prevL, currL;
     GivenFunction function;
     private Vector<Vector<Double>> data = new Vector<>();
 
@@ -16,6 +17,8 @@ public class DichotomyMethod {
         function = new GivenFunction();
         this.a = function.getA();
         this.b = function.getB();
+        this.currL = function.getDist();
+        this.prevL = function.getDist();
         calculate();
     }
 
@@ -41,7 +44,8 @@ public class DichotomyMethod {
         row.add(counter);
         row.add(a);
         row.add(b);
-        row.add(a / b);
+        row.add(Math.abs(this.b-this.a));
+        row.add(currL/prevL);
         row.add(x1);
         row.add(x2);
         row.add(function.f(x1));
@@ -68,6 +72,8 @@ public class DichotomyMethod {
             }
 
             counter++;
+            prevL = currL;
+            currL = Math.abs(b - a);
         }
         putDataInRow();
     }

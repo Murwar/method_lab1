@@ -4,6 +4,7 @@ public class GoldenRatio {
     private double epsilon;
     private double counter = 0;
     private double a, b, x1, x2;
+    private double prevL, currL;
     private GivenFunction function;
     private Vector<Vector<Double>> data = new Vector<>();
 
@@ -12,6 +13,8 @@ public class GoldenRatio {
         function = new GivenFunction();
         this.a = function.getA();
         this.b = function.getB();
+        this.currL = function.getDist();
+        this.prevL = function.getDist();
         calculate();
     }
 
@@ -36,7 +39,8 @@ public class GoldenRatio {
         row.add(counter);
         row.add(a);
         row.add(b);
-        row.add(a / b);
+        row.add(Math.abs(this.b - this.a));
+        row.add(currL / prevL);
         row.add(x1);
         row.add(x2);
         row.add(function.f(x1));
@@ -64,6 +68,9 @@ public class GoldenRatio {
                 findX1(a, b);
             }
             counter++;
+
+            prevL = currL;
+            currL = Math.abs(b - a);
         }
         putDataInRow();
     }
