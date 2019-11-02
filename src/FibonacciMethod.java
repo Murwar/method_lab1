@@ -4,15 +4,14 @@ public class FibonacciMethod {
 
     private int n = 0;
     private int counter = 0;
-    private double a, b, x1, x2, eps, l; //l -длина конечного интервала, eps - константа различимости
+    private double a, b, x1, x2, eps; // eps - константа различимости
     private double prevL, currL;
     private GivenFunction function;
     private Vector<Vector<Double>> data = new Vector<>();
 
 
-    FibonacciMethod(double eps, double l) {
+    FibonacciMethod(double eps) {
         this.eps = eps;
-        this.l = l;
         this.function = new GivenFunction();
         this.a = function.getA();
         this.b = function.getB();
@@ -24,7 +23,7 @@ public class FibonacciMethod {
 
     void findN() {
         double L0 = b - a;
-        while (fibonacciFunction(n) <= L0 / l)
+        while (fibonacciFunction(n) <= L0 / eps)
             n++;
     }
 
@@ -71,7 +70,7 @@ public class FibonacciMethod {
         findX1(counter);
         findX2(counter);
         putDataInRow();
-        while (counter != n - 2) {
+        while (counter != n - 2 && b - a > eps) {
 
             //Ищем, на каком интервале находится искомый минимум
             if (function.f(x1) > function.f(x2)) {
@@ -89,15 +88,9 @@ public class FibonacciMethod {
             currL = Math.abs(b - a);
             putDataInRow();
         }
-        x2 = x1 + eps;
-        if (function.f(x1) > function.f(x2))
-            a = x1;
-        else if (function.f(x1) < function.f(x2))
-            b = x2;
+    }
 
-        prevL = currL;
-        currL = Math.abs(b - a);
-        counter++;
-        putDataInRow();
+    double getResult(){
+        return (a+b)/2;
     }
 }

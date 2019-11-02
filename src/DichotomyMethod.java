@@ -77,4 +77,8 @@ public class DichotomyMethod {
         }
         putDataInRow();
     }
+
+    double getResult(){
+        return (a+b)/2;
+    }
 }

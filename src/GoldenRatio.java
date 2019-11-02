@@ -74,4 +74,8 @@ public class GoldenRatio {
         }
         putDataInRow();
     }
+
+    double getResult() {
+        return (a + b) / 2;
+    }
 }

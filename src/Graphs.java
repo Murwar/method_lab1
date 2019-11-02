@@ -9,7 +9,8 @@ import javafx.stage.Stage;
 public class Graphs extends Application {
 
     private double step = 0.01;
-    private double epsMin = 0.001;
+    private double epsMin = 0.0001;
+    private double epsilon = 0.1;
 
     @Override
     public void start(Stage stage) {
@@ -30,11 +31,12 @@ public class Graphs extends Application {
         fibonacciSeries.setName("Fibonacci Method");
         minOnLineSeries.setName("Search min on-line");
 
-        for (double epsilon = 0.1; epsilon >= epsMin; epsilon -= step) {
+        for (; epsilon > epsMin; epsilon -= step) {
             DichotomyMethod dichotomyMethod = new DichotomyMethod(epsilon);
             GoldenRatio goldenRatio = new GoldenRatio(epsilon);
-            FibonacciMethod fibonacciMethod = new FibonacciMethod(epsilon, 0.01);
-            SearchMinOnLine searchMinOnLine = new SearchMinOnLine(-8, 0.01);
+            FibonacciMethod fibonacciMethod = new FibonacciMethod(epsilon);
+            SearchMinOnLine searchMinOnLine = new SearchMinOnLine(-8, epsilon);
+            System.out.println("dich = " + dichotomyMethod.getCounter() + " fib = " + fibonacciMethod.getCounter() + " gold = " + goldenRatio.getCounter() + " search = " + searchMinOnLine.getCounter());
 
             dichotomySeries.getData().add(new XYChart.Data(Math.log(epsilon), dichotomyMethod.getCounter()));
             goldenRatioSeries.getData().add(new XYChart.Data(Math.log(epsilon), goldenRatio.getCounter()));
@@ -46,7 +48,7 @@ public class Graphs extends Application {
         lineChart.getData().add(dichotomySeries);
         lineChart.getData().add(goldenRatioSeries);
         lineChart.getData().add(fibonacciSeries);
-        lineChart.getData().add(minOnLineSeries);
+        //lineChart.getData().add(minOnLineSeries);
 
         stage.setScene(scene);
         stage.show();

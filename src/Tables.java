@@ -5,8 +5,10 @@ public class Tables extends JFrame {
 
     DichotomyMethod dichotomyMethod = new DichotomyMethod(0.01);
     GoldenRatio goldenRatio = new GoldenRatio(0.01);
-    FibonacciMethod fibonacciMethod = new FibonacciMethod(0.01, 0.01);
+    FibonacciMethod fibonacciMethod = new FibonacciMethod(0.01);
     SearchMinOnLine searchMinOnLine = new SearchMinOnLine(-10, 0.01);
+
+
     private Object[] columnsHeader = new String[]{"i", "ai", "bi", "bi-ai", "currL/prevL", "x1", "x2", "f(x1)", "f(x2)"};
     private Object[] columnsHeaderForSearchMin = new String[]{"i", "h", "xPrev", "xNext", "xPrev-xCurr", "currL/prevL", "f(xCurr)"};
 
