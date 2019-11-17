@@ -75,6 +75,34 @@ public class GoldenRatio {
         putDataInRow();
     }
 
+
+    double argmin(Vector<Double> xVector, Vector<Double> grad, double lowerBound, double higherBound, double eps) {
+        GivenFunctionForGradient f = new GivenFunctionForGradient();
+        Vector<Double> x1Vector = new Vector<>(xVector);
+        Vector<Double> x2Vector = new Vector<>(xVector);
+        findX1(lowerBound, higherBound);
+        findX2(lowerBound, higherBound);
+        while (Math.abs(higherBound - lowerBound) > eps) {
+
+            for (int i = 0; i < xVector.size(); i++) {
+                x1Vector.set(i, xVector.get(i) - x1 * grad.get(i));
+                x2Vector.set(i, xVector.get(i) - x2 * grad.get(i));
+            }
+            //Ищем, на каком интервале находится искомый минимум
+            if (f.f(x1Vector) >= f.f(x2Vector)) {
+                lowerBound = x1;
+                x1 = x2;
+                findX2(lowerBound, higherBound);
+            } else {
+                higherBound = x2;
+                x2 = x1;
+                findX1(lowerBound, higherBound);
+            }
+        }
+        return (lowerBound + higherBound) / 2;
+    }
+
+
     double getResult() {
         return (a + b) / 2;
     }
